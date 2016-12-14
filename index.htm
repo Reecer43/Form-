@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Assignment</title>
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="script.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+
+<body>
+<div id="container">
+<form id="returnForm" name="form" method="GET" action="submit_successful.html" onSubmit="return validate()  ">
+
+
+
+ 
+
+<h1> Return Request Form</h1>
+
+<h4> Name </h4>
+
+First name: <input type="text" name="fname" placeholder="Insert First Name" class="fullInputWidth"><br>
+<span id="errFirstName" class="error">Please Enter a Valid First Name<br></span>
+Last name: <input type="text" name="lname" placeholder="Insert Last Name" class="fullInputWidth"><br><br>
+<span id="errLastName" class="error">Please Enter a Valid Last Name<br></span>
+
+<h4>Address</h4>
+
+Street: <input type="text" name="street" placeholder="Insert Street Address" class="fullInputWidth"><br>
+<span id="errStreet" class="error">Please Enter a Valid Street Address<br></span>
+City: <input type="text" name="city" placeholder="Insert City" class="fullInputWidth"><br>
+<span id="errCity" class="error">Please Enter a Valid City<br></span>
+State: <select id="state" name="state">
+	<option value="">-</option>
+	<option value="AL">AL</option>
+	<option value="AK">AK</option>
+	<option value="AZ">AZ</option>
+	<option value="AR">AR</option>
+	<option value="CA">CA</option>
+	<option value="CO">CO</option>
+	<option value="CT">CT</option>
+	<option value="DE">DE</option>
+	<option value="DC">DC</option>
+	<option value="FL">FL</option>
+	<option value="GA">GA</option>
+	<option value="HI">HI</option>
+	<option value="ID">ID</option>
+	<option value="IL">IL</option>
+	<option value="IN">IN</option>
+	<option value="IA">IA</option>
+	<option value="KS">KS</option>
+	<option value="KY">KY</option>
+	<option value="LA">LA</option>
+	<option value="ME">ME</option>
+	<option value="MD">MD</option>
+	<option value="MA">MA</option>
+	<option value="MI">MI</option>
+	<option value="MN">MN</option>
+	<option value="MS">MS</option>
+	<option value="MO">MO</option>
+	<option value="MT">MT</option>
+	<option value="NE">NE</option>
+	<option value="NV">NV</option>
+	<option value="NH">NH</option>
+	<option value="NJ">NJ</option>
+	<option value="NM">NM</option>
+	<option value="NY">NY</option>
+	<option value="NC">NC</option>
+	<option value="ND">ND</option>
+	<option value="OH">OH</option>
+	<option value="OK">OK</option>
+	<option value="OR">OR</option>
+	<option value="PA">PA</option>
+	<option value="RI">RI</option>
+	<option value="SC">SC</option>
+	<option value="SD">SD</option>
+	<option value="TN">TN</option>
+	<option value="TX">TX</option>
+	<option value="UT">UT</option>
+	<option value="VT">VT</option>
+	<option value="VA">VA</option>
+	<option value="WA">WA</option>
+	<option value="WV">WV</option>
+	<option value="WI">WI</option>
+	<option value="WY">WY</option>  
+</select>
+<span id="errState" class="error">Please Select a State</span>
+<br>
+Zip: <input type="text" id="zip" name="zip" placeholder="Insert Zip" pattern="(\d{5}([\-]\d{4})?)"><br>
+<span id="errZip" class="error">Please input at least 5 digits</span><br>
+Country:<input type="text" name="country" placeholder="Insert Country" class="fullInputWidth"> <br>
+<span id="errCountry" class="error">Please Enter a Valid Country</span><br>
+<h4>Email</h4>
+
+Email:  <input type="text" name="email"  placeholder="example123@myweb.com" class="fullInputWidth"><br>
+		<span id="errEmail" class="error">Please enter a valid email address<br></span>
+
+
+<h4> Product Type </h4>
+
+ <input type="radio" name="Product" value="Book"> Book<br>
+ <input type="radio" name="Product" value="CD"> CD<br>
+ <input type="radio" name="Product" value="DVD"> DVD<br>  
+ <input type="radio" name="Product" value="Download"> Download<br>
+<span id="errRadio" class="error">Please Select an Option</span>
+<h4> Reason for Return </h4>
+
+<textarea id="rfr" name="reasonForReturn"  placeholder="Insert Return Reason Here"></textarea><br>
+<span id="errReason" class="error">Please Leave a Comment<br></span>
+<h4> Password </h4>
+
+Password: <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="fullInputWidth"><br><span id = "errPassword" class="error">Please Enter a Valid Passoword</span>
+<p> *Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+
+<h4> Terms </h4>
+
+<input type="checkbox" id="CHKTermsOfAgreement" name="termsOfAgreement" value="Terms"> Terms of Agreement <br><br>
+<span id="errCheckBox" class="error">Please Check the Box<br></span>
+<!--submit button-->
+
+
+<input type="submit"  value="Submit" />
+
+<!--CAPTCHA--> 
+
+<div class="g-recaptcha" data-sitekey="6Lf3DQ4UAAAAAEI82ISSHtbnci0M7VXqP9ibRt9p"></div>
+
+
+
+</form>
+</div>
+
+
+</body>
+</html>

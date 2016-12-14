@@ -1,0 +1,93 @@
+html
+{
+	font-family: "Times New Roman", Times, serif;
+}
+#container {
+	width: 50%;
+    border-radius: 5px;
+    background-color:#e6eaf2;
+    padding: 20px;
+	margin-left: 23em;
+	border-style: solid;
+	
+	
+}
+h4
+{
+	 text-decoration: underline;
+}
+
+.fullInputWidth
+{
+	width: 35%;
+}
+
+input[type=text], input[type=password], select
+{
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	
+	
+	
+}
+input[type=text]:focus {
+    background-color: lightblue;
+}
+input[type=password]:focus {
+    background-color: lightblue;
+}
+textarea:focus {
+    background-color: lightblue;
+}
+
+textarea {
+    width: 60%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+input[type=submit] {
+    width: 20%;
+    background-color: #275fba;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+	margin-left: 10em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover 
+{
+    background-color: #578adb;
+}
+
+.error
+{
+	color: red;
+	font-style: italic;
+	font-size: 10px;
+	display: none;
+	
+}
+
+#state
+{
+	width: 6em;
+}
+
+#zip
+{
+	width: 12em;
+}
